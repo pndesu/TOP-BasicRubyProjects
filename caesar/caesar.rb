@@ -1,4 +1,4 @@
-gitdef caesarEncode(string, number)
+def caesarEncode(string, number)
     string = string.bytes
     string = string.map do |char|
         if (char.between?(65, 90) || char.between?(97, 122))
@@ -18,7 +18,7 @@ gitdef caesarEncode(string, number)
         end
         char
     end
-    puts string.pack('c*')
+    string.pack('c*')
 end
 
 caesarEncode('abcd', -27)
